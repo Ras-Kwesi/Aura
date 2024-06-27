@@ -32,7 +32,7 @@ const SignIn = () => {
                 <Text
                     className='text-2xl text-white text-semibold font-psemibold mt-10'
                 >
-                    Log in to Aora!
+                    Log in to Aura!
                 </Text>
 
                 <FormField 
