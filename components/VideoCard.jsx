@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { icons } from "../constants";
 import { ResizeMode, Video } from "expo-av";
 
-const VideoCard = ({ title, creator, avatar, thumbnail, video }) => {
+const VideoCard = ({ title, maker, avatar, thumbnail, video }) => {
   const [play, setPlay] = useState(false);
   return (
     <View className="flex-col items-center px-4 mb-14">
@@ -25,7 +25,7 @@ const VideoCard = ({ title, creator, avatar, thumbnail, video }) => {
               {title}
             </Text>
             <Text className="text-xs text-gray-100 font-pregular">
-              {creator}
+              {maker}
             </Text>
           </View>
         </View>

@@ -27,7 +27,7 @@ const Home = () => {
         
     }
 
-    // console.log('\nlatestPosts\n\n', latestPosts)
+    console.log(posts[0])
   return (
     <SafeAreaView className ='bg-primary h-full'>
         <FlatList
@@ -38,8 +38,8 @@ const Home = () => {
                     title={item.title}
                     thumbnail={item.thumbnail}
                     video={item.video}
-                    // creator={item.creator.username}
-                    // avatar={item.creator.avatar}
+                    maker={item.maker.username}
+                    avatar={item.maker.avatar}
                 />
             )}
             ListHeaderComponent={() => (

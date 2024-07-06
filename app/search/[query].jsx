@@ -33,8 +33,8 @@ const Search = () => {
                     title={item.title}
                     thumbnail={item.thumbnail}
                     video={item.video}
-                    // creator={item.creator.username}
-                    // avatar={item.creator.avatar}
+                    maker={item.maker.username}
+                    avatar={item.maker.avatar}
                 />
             )}
             ListHeaderComponent={() => (
