@@ -23,22 +23,23 @@ const Home = () => {
         // Recall videos -> if any new videos appear
         setRefreshing(true);
         await refetch();
-        // setTimeout(() => {
-        //   setRefreshing(false); 
-        // }, 2000);
         setRefreshing(false)
         
     }
 
-    // console.log(data)
+    // console.log('\nlatestPosts\n\n', latestPosts)
   return (
     <SafeAreaView className ='bg-primary h-full'>
         <FlatList
-            data={[{id: 1}, {id: 2}, {id: 3}]}
+            data={posts}
             keyExtractor={(item) => item.$id}
             renderItem={({item}) => (
                 <VideoCard 
-                    video = {item}
+                    title={item.title}
+                    thumbnail={item.thumbnail}
+                    video={item.video}
+                    // creator={item.creator.username}
+                    // avatar={item.creator.avatar}
                 />
             )}
             ListHeaderComponent={() => (
@@ -48,9 +49,6 @@ const Home = () => {
                             Welcome Back{"\n"}
                             Username
                         </Text>
-                        {/* <Text className='text-2xl font-psemibold text-white'>
-                            Username
-                        </Text> */}
                         <View>
                             <Image
                                 source={images.logoSmall}
@@ -60,13 +58,11 @@ const Home = () => {
                         </View>
                     </View>
                     <SearchInput/>
-                    <View className = 'w-full flex-1 pt-5 pb-8'>
-                        <Text className = 'text-gray-200 font-pregular mb-3'>
+                    <View className='w-full flex-1 pt-5 pb-8'>
+                        <Text className='text-gray-200 font-pregular mb-3'>
                             Latest Videos
                         </Text>
-                        <Trending
-                            posts={latestPosts ?? []}
-                        />
+                        <Trending posts={latestPosts ?? []} />
                     </View>
                 </View>
             )}
