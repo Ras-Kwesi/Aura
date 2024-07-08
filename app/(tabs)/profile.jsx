@@ -70,7 +70,7 @@ const Profile = () => {
                             title={posts.length || 0}
                             subtitle='Posts'
                             containerStyle='mr-12 '
-                            titleStyle='text-xl'
+                            titleStyle='text-xl text-gray-100'
                         />
                         <InfoBox 
                             title='1232'
