@@ -33,7 +33,7 @@ const Create = () => {
             mediaTypes: selectType === 'image' ? ImagePicker.MediaTypeOptions.Images : ImagePicker.MediaTypeOptions.Videos,
             allowsEditing: true,
             aspect: [4, 3],
-            quality: 1,
+            quality: 1, 
         })
 
         if (!result.canceled) {
